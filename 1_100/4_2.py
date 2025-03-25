@@ -28,7 +28,7 @@ def findMedianSortedArrays(nums1, nums2):
                 return max(nums1_left_max, nums2_left_max)
             else:
                 return (max(nums1_left_max, nums2_left_max) + min(nums1_right_min, nums2_right_min)) / 2
-        # 如果nums1的最大值大于nums2的最小值，则nums1的分割线左移 nums2的分割线右移 反之
+        # 如果nums1的最大值大于nums2的最小值，则nums1的右边边界需要向左移动，反之nums2的左边界需要向右移动
         elif nums1_left_max > nums2_right_min:
             # 分割点 i 需要左移
             right = i - 1
