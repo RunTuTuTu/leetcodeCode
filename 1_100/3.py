@@ -11,6 +11,7 @@ class Solution(object):
         for i in range(len(s)):
             # i为左指针
             if i != 0:
+                # 能进到这里面，要么就是右指针到最右边，要么就是右指针遇到重复的元素
                 res_set.remove(s[i-1])
             while right < len(s) and s[right] not in res_set:
                 res_set.add(s[right])
